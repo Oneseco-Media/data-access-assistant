@@ -43,6 +43,14 @@ Use a consistent workflow so the assistant can scale across many request types:
 - Separate business logic, SQL logic, and access control guidance when possible.
 - Highlight anything that should become a reusable template, policy, or checklist.
 
+## Platform Linking Task Template
+When connecting the assistant workflow to additional tech stack platforms, track:
+1. Platform and owner.
+2. Integration method and required credentials path.
+3. Least-privilege access scope and approval workflow.
+4. Validation query/workflow and expected output.
+5. Known limits, failure modes, and escalation contact.
+
 ## Suggested Starter Prompts
 - "Help me write a SQL query to join users and subscriptions and show active plans."
 - "Review this query for performance and security issues."
