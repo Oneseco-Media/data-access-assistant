@@ -1,6 +1,6 @@
 # data-access-assistant
 
-CustomGPT profile: [CUSTOMGPT_PROFILE.md](CUSTOMGPT_PROFILE.md)
+CustomGPT profile: [CUSTOMGPT_PROFILE.md]
 
 ## Overview
 This repository stores the core profile for a data access assistant CustomGPT.

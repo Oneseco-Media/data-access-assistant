@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Command Center | Collaboration Hub</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #07101d;
+            color: #e9f1ff;
+        }
+        .mono { font-family: 'JetBrains Mono', monospace; }
+        .glass {
+            background: rgba(22, 34, 56, 0.6);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(41, 51, 80, 0.8);
+        }
+        .card-hover:hover {
+            border-color: #4de3ff;
+            transform: translateY(-4px);
+            transition: all 0.3s ease;
+        }
+        .gradient-text {
+            background: linear-gradient(90deg, #4de3ff, #b5c7ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .status-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background-color: #a6ff7a;
+            box-shadow: 0 0 12px #a6ff7a;
+        }
+    </style>
+</head>
+<body class="min-h-screen pb-20">
+
+    <!-- Topbar -->
+    <header class="sticky top-0 z-50 glass border-b border-slate-800 px-6 py-4">
+        <div class="max-w-7xl mx-auto flex items-center justify-between">
+            <div class="flex items-center gap-4">
+                <div class="w-10 h-10 bg-gradient-to-br from-cyan-400 to-blue-600 rounded-lg flex items-center justify-center text-slate-900 font-extrabold text-xl shadow-lg shadow-cyan-500/20">
+                    C
+                </div>
+                <div>
+                    <h1 class="text-lg font-extrabold tracking-tight">Project Command Center</h1>
+                    <div class="flex items-center gap-2">
+                        <span class="status-dot"></span>
+                        <span class="text-xs text-slate-400 font-medium uppercase tracking-widest">System Active</span>
+                    </div>
+                </div>
+            </div>
+            <nav class="hidden md:flex items-center gap-6 text-sm font-medium text-slate-300">
+                <a href="#hub" class="hover:text-cyan-400 transition-colors">Workspaces</a>
+                <a href="#activity" class="hover:text-cyan-400 transition-colors">Activity</a>
+                <a href="#roadmap" class="hover:text-cyan-400 transition-colors">Roadmap</a>
+                <a href="#mapping" class="hover:text-cyan-400 transition-colors">Mapping</a>
+                <a href="#" class="px-4 py-2 bg-slate-800 rounded-full border border-slate-700 hover:bg-slate-700 transition-all">Quick Actions</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="max-w-7xl mx-auto px-6 pt-12">
+        <!-- Hero / Overview -->
+        <section class="mb-16 text-center md:text-left md:flex items-center justify-between gap-12">
+            <div class="md:w-2/3">
+                <span class="text-cyan-400 font-bold text-xs uppercase tracking-widest mb-3 block">Mission Control</span>
+                <h2 class="text-4xl md:text-6xl font-extrabold leading-tight mb-6">
+                    The <span class="gradient-text">Collaboration Hub</span><br>for Integrated Development
+                </h2>
+                <p class="text-slate-400 text-lg max-w-2xl leading-relaxed">
+                    A unified command center connecting source control, creative exploration, knowledge management, and AI collaboration. This hub serves as the primary navigational layer for the project's digital ecosystem.
+                </p>
+            </div>
+            <div class="hidden md:block w-1/3 glass rounded-2xl p-6 border border-slate-700">
+                <h3 class="text-sm font-bold text-slate-300 uppercase tracking-wider mb-4">Project Status</h3>
+                <div class="space-y-4">
+                    <div class="flex justify-between items-center text-sm">
+                        <span class="text-slate-500">Phase</span>
+                        <span class="font-semibold text-slate-200">v0.1 Alpha / Prototyping</span>
+                    </div>
+                    <div class="flex justify-between items-center text-sm">
+                        <span class="text-slate-500">Milestone</span>
+                        <span class="font-semibold text-slate-200">Hub Architecture</span>
+                    </div>
+                    <div class="w-full bg-slate-800 h-2 rounded-full overflow-hidden">
+                        <div class="bg-cyan-500 h-full" style="width: 35%"></div>
+                    </div>
+                    <div class="text-right text-xs text-slate-500 font-medium">35% Complete</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- The Hub / Workspace Grid -->
+        <section id="hub" class="mb-20">
+            <div class="flex items-center gap-4 mb-8">
+                <h3 class="text-2xl font-bold">Connected Workspaces</h3>
+                <div class="h-px flex-1 bg-slate-800"></div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6">
+                <!-- GitHub -->
+                <a href="#" class="glass p-6 rounded-2xl card-hover group">
+                    <div class="w-12 h-12 bg-slate-800 rounded-xl flex items-center justify-center mb-4 text-2xl group-hover:bg-cyan-500/20 transition-colors">
+                        🐙
+                    </div>
+                    <h4 class="text-lg font-bold mb-1">GitHub</h4>
+                    <p class="text-xs text-cyan-400 font-bold uppercase tracking-wider mb-3">Source of Truth</p>
+                    <p class="text-sm text-slate-400 leading-relaxed mb-4">Code, PRs, Issues, and Release management.</p>
+                    <span class="text-xs font-bold text-slate-500 flex items-center gap-1 group-hover:text-slate-300">Open Repo &rarr;</span>
+                </a>
+
+                <!-- Craft -->
+                <a href="#" class="glass p-6 rounded-2xl card-hover group">
+                    <div class="w-12 h-12 bg-slate-800 rounded-xl flex items-center justify-center mb-4 text-2xl group-hover:bg-cyan-500/20 transition-colors">
+                        🎨
+                    </div>
+                    <h4 class="text-lg font-bold mb-1">Craft</h4>
+                    <p class="text-xs text-cyan-400 font-bold uppercase tracking-wider mb-3">Creative Lab</p>
+                    <p class="text-sm text-slate-400 leading-relaxed mb-4">Design docs, brainstorming, and project charters.</p>
+                    <span class="text-xs font-bold text-slate-500 flex items-center gap-1 group-hover:text-slate-300">Open Workspace &rarr;</span>
+                </a>
+
+                <!-- Drafts -->
+                <a href="#" class="glass p-6 rounded-2xl card-hover group">
+                    <div class="w-12 h-12 bg-slate-800 rounded-xl flex items-center justify-center mb-4 text-2xl group-hover:bg-cyan-500/20 transition-colors">
+                        ✍️
+                    </div>
+                    <h4 class="text-lg font-bold mb-1">Drafts</h4>
+                    <p class="text-xs text-cyan-400 font-bold uppercase tracking-wider mb-3">Rapid Capture</p>
+                    <p class="text-sm text-slate-400 leading-relaxed mb-4">Inbox for ideas, logs, and automation triggers.</p>
+                    <span class="text-xs font-bold text-slate-500 flex items-center gap-1 group-hover:text-slate-300">Open Inbox &rarr;</span>
+                </a>
+
+                <!-- Notion -->
+                <a href="#" class="glass p-6 rounded-2xl card-hover group">
+                    <div class="w-12 h-12 bg-slate-800 rounded-xl flex items-center justify-center mb-4 text-2xl group-hover:bg-cyan-500/20 transition-colors">
+                        📓
+                    </div>
+                    <h4 class="text-lg font-bold mb-1">Notion</h4>
+                    <p class="text-xs text-cyan-400 font-bold uppercase tracking-wider mb-3">Knowledge Base</p>
+                    <p class="text-sm text-slate-400 leading-relaxed mb-4">Structured databases and project documentation.</p>
+                    <span class="text-xs font-bold text-slate-500 flex items-center gap-1 group-hover:text-slate-300">Open Wiki &rarr;</span>
+                </a>
+
+                <!-- Custom GPT -->
+                <a href="#" class="glass p-6 rounded-2xl card-hover group">
+                    <div class="w-12 h-12 bg-slate-800 rounded-xl flex items-center justify-center mb-4 text-2xl group-hover:bg-cyan-500/20 transition-colors">
+                        🤖
+                    </div>
+                    <h4 class="text-lg font-bold mb-1">Custom GPT</h4>
+                    <p class="text-xs text-cyan-400 font-bold uppercase tracking-wider mb-3">AI Interface</p>
+                    <p class="text-sm text-slate-400 leading-relaxed mb-4">AI collaborator and project knowledge agent.</p>
+                    <span class="text-xs font-bold text-slate-500 flex items-center gap-1 group-hover:text-slate-300">Launch Chat &rarr;</span>
+                </a>
+            </div>
+        </section>
+
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-12 mb-20">
+            <!-- Activity Feed -->
+            <section id="activity" class="lg:col-span-1">
+                <div class="flex items-center gap-4 mb-6">
+                    <h3 class="text-xl font-bold">Recent Activity</h3>
+                    <div class="h-px flex-1 bg-slate-800"></div>
+                </div>
+                <div class="space-y-4">
+                    <div class="glass p-4 rounded-xl border border-slate-800 flex gap-4">
+                        <div class="w-2 h-2 bg-cyan-500 rounded-full mt-2"></div>
+                        <div>
+                            <p class="text-sm text-slate-200 font-medium">Collaboration Hub architecture defined</p>
+                            <p class="text-xs text-slate-500 mt-1">2 hours ago &bull; System</p>
+                        </div>
+                    </div>
+                    <div class="glass p-4 rounded-xl border border-slate-800 flex gap-4">
+                        <div class="w-2 h-2 bg-slate-600 rounded-full mt-2"></div>
+                        <div>
+                            <p class="text-sm text-slate-200 font-medium">Updated Notion database schema</p>
+                            <p class="text-xs text-slate-500 mt-1">5 hours ago &bull; User</p>
+                        </div>
+                    </div>
+                    <div class="glass p-4 rounded-xl border border-slate-800 flex gap-4">
+                        <div class="w-2 h-2 bg-slate-600 rounded-full mt-2"></div>
+                        <div>
+                            <p class="text-sm text-slate-200 font-medium">Initial GitHub repository scaffolded</p>
+                            <p class="text-xs text-slate-500 mt-1">Yesterday &bull; System</p>
+                        </div>
+                    </div>
+                </div>
+                <button class="w-full mt-6 py-3 text-sm font-bold text-slate-400 hover:text-cyan-400 transition-colors text-center">View All Activity &rarr;</button>
+            </section>
+
+            <!-- Roadmap / Milestones -->
+            <section id="roadmap" class="lg:col-span-2">
+                <div class="flex items-center gap-4 mb-6">
+                    <h3 class="text-xl font-bold">Project Roadmap</h3>
+                    <div class="h-px flex-1 bg-slate-800"></div>
+                </div>
+                <div class="relative border-l-2 border-slate-800 ml-3 space-y-8 pl-8">
+                    <div class="relative">
+                        <div class="absolute -left-[41px] top-1 w-4 h-4 bg-cyan-500 rounded-full ring-4 ring-cyan-500/20"></div>
+                        <h4 class="text-lg font-bold text-slate-200 mb-1">Phase 1: Foundation</h4>
+                        <p class="text-sm text-slate-400 mb-2">Establish core workspaces, authentication, and basic hub navigation.</p>
+                        <div class="flex gap-2">
+                            <span class="px-2 py-1 bg-cyan-500/10 text-cyan-400 text-[10px] font-bold rounded border border-cyan-500/20">COMPLETED</span>
+                        </div>
+                    </div>
+                    <div class="relative">
+                        <div class="absolute -left-[41px] top-1 w-4 h-4 bg-slate-700 rounded-full ring-4 ring-slate-700/20"></div>
+                        <h4 class="text-lg font-bold text-slate-200 mb-1">Phase 2: Integration</h4>
+                        <p class="text-sm text-slate-400 mb-2">Enable live data sync between Notion and GitHub using WebMCP/API.</p>
+                        <div class="flex gap-2">
+                            <span class="px-2 py-1 bg-slate-800 text-slate-500 text-[10px] font-bold rounded border border-slate-700">IN PROGRESS</span>
+                        </div>
+                    </div>
+                    <div class="relative">
+                        <div class="absolute -left-[41px] top-1 w-4 h-4 bg-slate-700 rounded-full ring-4 ring-slate-700/20"></div>
+                        <h4 class="text-lg font-bold text-slate-200 mb-1">Phase 3: AI Orchestration</h4>
+                        <p class="text-sm text-slate-400 mb-2">Connect Custom GPT as a full-context agent capable of cross-workspace action.</p>
+                        <div class="flex gap-2">
+                            <span class="px-2 py-1 bg-slate-800 text-slate-500 text-[10px] font-bold rounded border border-slate-700">PLANNED</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Workspace Mapping Guide -->
+        <section id="mapping" class="mb-20">
+            <div class="flex items-center gap-4 mb-8">
+                <h3 class="text-2xl font-bold">Workspace Mapping Guide</h3>
+                <div class="h-px flex-1 bg-slate-800"></div>
+            </div>
+            <div class="overflow-x-auto glass rounded-2xl border border-slate-700">
+                <table class="w-full text-left text-sm">
+                    <thead class="bg-slate-800/50 text-slate-300 font-bold uppercase tracking-wider">
+                        <tr>
+                            <th class="px-6 py-4">Surface</th>
+                            <th class="px-6 py-4">Primary Role</th>
+                            <th class="px-6 py-4">What Belongs Here</th>
+                            <th class="px-6 py-4">Interconnects</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-slate-800">
+                        <tr>
+                            <td class="px-6 py-4 font-bold text-slate-200">GitHub</td>
+                            <td class="px-6 py-4 text-slate-400">Source of Truth</td>
+                            <td class="px-6 py-4 text-slate-400">Production code, Pull Requests, Issue tracking, Release tags.</td>
+                            <td class="px-6 py-4"><span class="px-2 py-1 bg-slate-800 rounded text-[10px] text-slate-500 border border-slate-700">Notion</span> <span class="px-2 py-1 bg-slate-800 rounded text-[10px] text-slate-500 border border-slate-700">GPT</span></td>
+                        </tr>
+                        <tr>
+                            <td class="px-6 py-4 font-bold text-slate-200">Craft</td>
+                            <td class="px-6 py-4 text-slate-400">Creative Lab</td>
+                            <td class="px-6 py-4 text-slate-400">Design docs, Brainstorming, Project charters, Visual mapping.</td>
+                            <td class="px-6 py-4"><span class="px-2 py-1 bg-slate-800 rounded text-[10px] text-slate-500 border border-slate-700">Notion</span></td>
+                        </tr>
+                        <tr>
+                            <td class="px-6 py-4 font-bold text-slate-200">Drafts</td>
+                            <td class="px-6 py-4 text-slate-400">Rapid Capture</td>
+                            <td class="px-6 py-4 text-slate-400">Daily logs, Quick ideas, Automation triggers, Scratchpad.</td>
+                            <td class="px-6 py-4"><span class="px-2 py-1 bg-slate-800 rounded text-[10px] text-slate-500 border border-slate-700">GitHub</span> <span class="px-2 py-1 bg-slate-800 rounded text-[10px] text-slate-500 border border-slate-700">Notion</span></td>
+                        </tr>
+                        <tr>
+                            <td class="px-6 py-4 font-bold text-slate-200">Notion</td>
+                            <td class="px-6 py-4 text-slate-400">Knowledge Base</td>
+                            <td class="px-6 py-4 text-slate-400">Asset databases, Structured project tracking, Documentation wiki.</td>
+                            <td class="px-6 py-4"><span class="px-2 py-1 bg-slate-800 rounded text-[10px] text-slate-500 border border-slate-700">All</span></td>
+                        </tr>
+                        <tr>
+                            <td class="px-6 py-4 font-bold text-slate-200">Custom GPT</td>
+                            <td class="px-6 py-4 text-slate-400">AI Interface</td>
+                            <td class="px-6 py-4 text-slate-400">Prompt engineering, AI code review, Project knowledge agent.</td>
+                            <td class="px-6 py-4"><span class="px-2 py-1 bg-slate-800 rounded text-[10px] text-slate-500 border border-slate-700">GitHub</span> <span class="px-2 py-1 bg-slate-800 rounded text-[10px] text-slate-500 border border-slate-700">Notion</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Shared Resources -->
+        <section class="mb-20">
+            <div class="flex items-center gap-4 mb-8">
+                <h3 class="text-2xl font-bold">Shared Resources</h3>
+                <div class="h-px flex-1 bg-slate-800"></div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="glass p-6 rounded-2xl border border-slate-700 flex items-start gap-4">
+                    <div class="text-2xl">📄</div>
+                    <div>
+                        <h4 class="font-bold text-slate-200 mb-1">Project Charter</h4>
+                        <p class="text-sm text-slate-400 mb-3">High-level goals and success metrics.</p>
+                        <a href="#" class="text-xs text-cyan-400 font-bold hover:underline">View in Craft &rarr;</a>
+                    </div>
+                </div>
+                <div class="glass p-6 rounded-2xl border border-slate-700 flex items-start gap-4">
+                    <div class="text-2xl">🛠️</div>
+                    <div>
+                        <h4 class="font-bold text-slate-200 mb-1">API Documentation</h4>
+                        <p class="text-sm text-slate-400 mb-3">Technical specs for WebMCP integrations.</p>
+                        <a href="#" class="text-xs text-cyan-400 font-bold hover:underline">View in Notion &rarr;</a>
+                    </div>
+                </div>
+                <div class="glass p-6 rounded-2xl border border-slate-700 flex items-start gap-4">
+                    <div class="text-2xl">🚀</div>
+                    <div>
+                        <h4 class="font-bold text-slate-200 mb-1">Deployment Guide</h4>
+                        <p class="text-sm text-slate-400 mb-3">Step-by-step guide for production rollout.</p>
+                        <a href="#" class="text-xs text-cyan-400 font-bold hover:underline">View in GitHub &rarr;</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="border-t border-slate-800 py-12 text-center">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex items-center justify-center gap-2 mb-4">
+                <div class="w-6 h-6 bg-slate-800 rounded flex items-center justify-center text-xs font-bold text-slate-400">C</div>
+                <span class="text-sm font-bold text-slate-300">Oneseco Media</span>
+            </div>
+            <p class="text-slate-500 text-xs">© 2026 Project Collaboration Hub. Built for professional development workflows.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
